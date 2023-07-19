@@ -1,0 +1,41 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.first-section {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+
+}
+
+.first-section>*>* {
+    text-decoration: none;
+    padding: 10px;
+    color: white;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.hovered:hover {
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+}
+
+ul li {
+    list-style: none;
+}
+
+.main-logo {
+    font-size: 1.4rem;
+}
+
+nav {
+    width: 100%;
+    height: 60px;
+    background-color: rgb(39, 15, 54);
+    display: flex;
+    align-items: center;
+}

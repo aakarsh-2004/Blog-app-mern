@@ -1,0 +1,30 @@
+div.secondary-content>h1 {
+    margin-top: 100px;
+    font-size: 3.5rem;
+    color: rgb(39, 15, 54);
+    margin-left: 60px;
+}
+
+div.Component>img {
+    height: 300px;
+    width: 500px;
+    border-radius: 7px;
+}
+
+div.Component {
+    display: flex;
+    justify-content: space-around;
+    /*align-items: center;  */
+    margin: 40px;
+}
+
+.Component>.r-side>p {
+    max-width: 700px;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.Component>.r-side>h1 {
+    font-size: 3rem;
+    color: rgb(39, 15, 54);
+}
