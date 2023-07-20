@@ -18,7 +18,7 @@ app.use(cookieParser());
 dotenv.config();
 
 mongoose
-    .connect(process.env.URL, {useUnifiedTopology: true, useNewUrlParser: true})
+    .connect(process.env.URL)
     .then(() => {
         console.log(`Successfully connected to the database`);
         app.listen(port, () => {

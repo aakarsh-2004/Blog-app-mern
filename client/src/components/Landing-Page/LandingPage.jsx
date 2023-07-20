@@ -27,6 +27,13 @@ const LandingPage = () => {
                 description = 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus esse recusandae eius! Incidunt optio voluptatum officiis repellendus repudiandae pariatur. Animi fugiat sapiente corrupti porro dolorem. '
                 />
             </div>
+            <div className="credits">
+                <h1>Created by Aakarsh</h1>
+                <a href='https://github.com/aakarsh-2004/Blog-app-mern' target='_blank'>Source code on github</a>
+            </div>
+            <footer>
+                © All Copyrights Reserved by Aakarsh Beohar
+            </footer>
         </div>
     );
 };

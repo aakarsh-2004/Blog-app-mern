@@ -60,3 +60,42 @@
 .main-content {
     margin-top: 60px;
 }
+
+div.credits {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+div.credits > h1 {
+    font-size: 3rem;
+    color: rgb(39, 15, 54);
+}
+
+div.credits > a {
+    color: white;
+    background-color: rgb(39, 15, 54);
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+div.credits > a:hover {
+    background-color: transparent;
+    border: 1px solid rgb(39, 15, 54);
+    color: black;
+}
+
+footer {
+    margin-top: 50px;
+    background-color: rgb(39, 15, 54);
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
