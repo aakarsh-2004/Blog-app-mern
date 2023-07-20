@@ -1,23 +1,43 @@
 import React from 'react';
 import './Create.css';
+import axios from 'axios';
+import { useState } from 'react';
 
 const Create = () => {
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [link, setLink] = useState("");
+  const [isAdded, setIsAdded] = useState(false);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const blogAdded = {title, description, link};
+      const response = await axios.post('http://localhost:4000/create', blogAdded);
+      console.log(response);
+      setIsAdded(true);
+      setTitle("")
+      setDescription("")
+      setLink("")
+    } catch (error) {
+      console.log(`Error while adding the form, try again!`);
+    };
+  };
   return (
     <div className='Create'>
       <div className="create-content">
         <h1>Create Your Blog</h1>
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="title">
             <h3>Title</h3>
-            <input type="text" placeholder='Enter Title' />
+            <input type="text" placeholder='Enter Title' onChange={(e) => setTitle(e.target.value)} value={title}/>
           </div>
           <div className="description">
             <h3>Description</h3>
-            <textarea name="description" id="" cols="30" rows="10" placeholder='Enter Description'></textarea>
+            <textarea name="description" id="" cols="30" rows="10" placeholder='Enter Description' onChange={(e) => setDescription(e.target.value)} value={description}></textarea>
           </div>
           <div className="image-link">
             <h3>Link</h3>
-            <input type="text" placeholder='Enter image link' />
+            <input type="text" placeholder='Enter image link' onChange={(e) => setLink(e.target.value)} value={link}/>
           </div>
           <button type="submit">Publish</button>
         </form>

@@ -48,7 +48,16 @@ router.post('/login', async (req, res, next) => {
     } catch (error) {
         console.log(`Something wrong the login ${error}`);
     }
-
 })
+
+router.get('/profile', (req, res, next) => {
+    const {token} = req.cookies;
+    jwt.verify(token, secret, {}, (err, info) => {
+        if (err) {
+            console.log('Error while verifying token',err);
+        } else {
+            res.json(info);        }
+    });
+});
 
 module.exports = router;

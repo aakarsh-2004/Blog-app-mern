@@ -9,7 +9,7 @@ const Navbar = () => {
                 <nav>
                     <ul className='first-section'>
                         <li><a href="/" className='main-logo'>My Blog</a></li>
-                        <li><a href="/home" className='hovered'>Blogs</a></li>
+                        <li><a href="/blogs" className='hovered'>Blogs</a></li>
                         <li><a href="/create" className='hovered'>Create Blog</a></li>
                         <li><a href="/register" className='hovered'>Login/Register</a></li>
                     </ul>

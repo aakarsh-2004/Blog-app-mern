@@ -16,16 +16,7 @@ const LandingPage = () => {
             </div>
             <div className="secondary-content">
                 <h1>Some of the recent blogs.</h1>
-                <Blog 
-                link = "https://upload.wikimedia.org/wikipedia/commons/8/81/Artificial_Intelligence_%26_AI_%26_Machine_Learning_-_30212411048.jpg"
-                title = 'Is Chat-GPT the end of everything?'
-                description = 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus esse recusandae eius! Incidunt optio voluptatum officiis repellendus repudiandae pariatur. Animi fugiat sapiente corrupti porro dolorem. Minima vero natus, animi dolorem exercitationem recusandae pariatur perferendis'
-                />
-                <Blog 
-                link = "https://images.unsplash.com/photo-1500964757637-c85e8a162699?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YmVhdXRpZnVsJTIwbGFuZHNjYXBlfGVufDB8fDB8fHww&w=1000&q=80"
-                title = 'How to travel the world for cheap?'
-                description = 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus esse recusandae eius! Incidunt optio voluptatum officiis repellendus repudiandae pariatur. Animi fugiat sapiente corrupti porro dolorem. '
-                />
+                <Blog />
             </div>
             <div className="credits">
                 <h1>Created by Aakarsh</h1>
