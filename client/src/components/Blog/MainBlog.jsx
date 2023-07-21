@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './Blog.css';
 
-const Blog = ({count}) => {
+const MainBlog = () => {
     const [blogs, setBlogs] = useState("");
     useEffect(() => {
         async function fetchData() {
             const response = await axios.get('http://localhost:4000/blogs');
             const result = response.data;
-            setBlogs(result.reverse().slice(0, Number(count)));
+            setBlogs(result.reverse());
         }
         fetchData()
     }, [])
@@ -29,4 +29,4 @@ const Blog = ({count}) => {
     );
 };
 
-export default Blog;
+export default MainBlog;

@@ -54,3 +54,14 @@ form {
     justify-content: center;
     align-items: center;
 }
+
+.added > h2 {
+    color: rgb(39, 15, 54);
+    margin: 10px;
+}
+div.added {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

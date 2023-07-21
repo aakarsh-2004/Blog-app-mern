@@ -16,7 +16,7 @@ const LandingPage = () => {
             </div>
             <div className="secondary-content">
                 <h1>Some of the recent blogs.</h1>
-                <Blog />
+                <Blog count = '2'/>
             </div>
             <div className="credits">
                 <h1>Created by Aakarsh</h1>

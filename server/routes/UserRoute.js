@@ -11,14 +11,14 @@ app.use(express.json());
 app.use(cookieParser());
 
 router.post('/register', async (req, res, next) => {
-    const {name, email, password} = req.body;
+    const {username, email, password} = req.body;
     const saltRounds = 10;
     await bcrypt.hash(password, saltRounds, async (err, hashed) => {
         if (err) {
             res.json("There was an error hashing");
         } else {
             const userAdded = await UserModel.create({
-                name: name,
+                username: username,
                 email: email,
                 password: hashed
             })
@@ -29,19 +29,18 @@ router.post('/register', async (req, res, next) => {
 
 router.post('/login', async (req, res, next) => {
     try {
-        const {email, password} = req.body;
-        const data = await UserModel.findOne({email});
+        const {username, password} = req.body;
+        const data = await UserModel.findOne({username});
         const hashedPassword = data.password;
-        const result = await bcrypt.compare(password, hashedPassword);
+        const result = bcrypt.compare(password, hashedPassword);
         if (result) {
-            jwt.sign({email, id: data._id}, secret, {}, (err, token) => {
+            jwt.sign({username, id: data._id}, secret, {}, (err, token) => {
                 if(err) throw err;
-                res.cookie('token', token, {}).json({
+                res.cookie('token', token).json({
                     id: data._id,
-                    email,
+                    username,
                 });
             })
-            res.json("Logged in!")
         } else {
             res.status(400).json("Wrong credentials");
         }
@@ -59,5 +58,9 @@ router.get('/profile', (req, res, next) => {
             res.json(info);        }
     });
 });
+
+router.post('/logout', (req, res, next) => {
+    res.cookie('token', '').json('ok');
+})
 
 module.exports = router;

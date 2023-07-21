@@ -39,3 +39,25 @@ nav {
     display: flex;
     align-items: center;
 }
+
+.second-section > li {
+    font-size: 1.7rem;
+    color: white;
+    margin: 20px;
+}
+
+.first-section > button {
+    width: 80px;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+    font-size: 1.2rem;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.first-section > button:hover {
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+}

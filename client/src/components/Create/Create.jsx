@@ -41,6 +41,12 @@ const Create = () => {
           </div>
           <button type="submit">Publish</button>
         </form>
+        {isAdded ? 
+        <div className="added">
+          <h2>Blog Published Successfully!</h2> 
+          <button><a href="/blogs">See here</a></button>
+        </div>
+        : ""}
       </div>
     </div>
   )

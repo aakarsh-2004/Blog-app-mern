@@ -4,7 +4,7 @@ import axios from 'axios';
 import './Register.css';
 
 const Register = () => {
-  const [name, setName] = useState("");
+  const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -13,7 +13,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (password === confirmPassword) {
-      const userAdded = {name, email, password};
+      const userAdded = {username, email, password};
       axios.post('http://localhost:4000/register', userAdded)
         .then((response) => {
           console.log(response);
@@ -34,8 +34,8 @@ const Register = () => {
         <p>Kindly fill this form to register</p>
         <form onSubmit={handleSubmit}>
           <div className="name">
-            <label htmlFor="name">Name</label>
-            <input type="text" id='name' placeholder='Enter name' onChange={(e) => setName(e.target.value)} value={name}/>
+            <label htmlFor="name">Username</label>
+            <input type="text" id='name' placeholder='Enter username' onChange={(e) => setUsername(e.target.value)} value={username}/>
           </div>
           <div className="email">
             <label htmlFor="email">Email</label>
