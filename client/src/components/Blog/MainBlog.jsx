@@ -13,19 +13,22 @@ const MainBlog = () => {
         fetchData()
     }, [])
     return (
-        <div className='Component'>
-            {blogs && blogs.map((blog) => {
-                return (
-                    <div className="blogs" key={blog._id}>
-                        <img src={blog.link} alt="" />
-                        <div className="r-side">
-                            <h1>{blog.title}</h1>
-                            <p>{blog.description} <a href="">Read More</a></p>
+        <>
+            
+            <div className='Component'>
+                {blogs && blogs.map((blog) => {
+                    return (
+                        <div className="blogs" key={blog._id}>
+                            <img src={blog.link} alt="" />
+                            <div className="r-side">
+                                <h1>{blog.title}</h1>
+                                <p>{blog.description} <a href="">Read More</a></p>
+                            </div>
                         </div>
-                    </div>
-                )
-            })}
-        </div>
+                    )
+                })}
+            </div>
+        </>
     );
 };
 

@@ -65,3 +65,33 @@ div.added {
     justify-content: center;
     align-items: center;
 }
+
+.publishblog {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.publishblog > * {
+    margin: 0;
+}
+
+.publishblog > h3 {
+    color: red;
+}
+
+.publishblog > a > button {
+    background-color: transparent;
+    border: 1px solid red;
+    transition: all 0.3s ease;
+    padding: 7px;
+    border-radius: 7px;
+    font-size: 1.2rem;
+    color: black;
+}
+
+.publishblog > a > button:hover {
+    background-color: red;
+    border: none;
+    color: white;
+}

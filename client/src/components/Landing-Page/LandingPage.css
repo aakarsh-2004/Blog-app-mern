@@ -31,6 +31,17 @@
     color: white;
     transition: all 0.3s ease;
 }
+.text-content-main > .signedincontent > a > button {
+    margin: 0;
+    width: 100px;
+    height: 40px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(39, 15, 54);
+    color: white;
+    transition: all 0.3s ease;
+}
 
 .text-content-main>button>a {
     color: white;
@@ -39,6 +50,12 @@
 .text-content-main>button:hover {
     border: 1px solid rgb(39, 15, 54);
     background-color: transparent;
+}
+
+.text-content-main > .signedincontent > a > button:hover {
+    border: 1px solid rgb(39, 15, 54);
+    background-color: transparent;
+    color: black;
 }
 
 .text-content-main>button:hover .signup-btn {
@@ -98,4 +115,11 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.signedincontent > h3 {
+    font-size: 1.7rem;
+    color: rgb(39, 15, 54);
+    margin-top: 10px;
+    margin-bottom: 7px;
 }

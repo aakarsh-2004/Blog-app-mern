@@ -5,10 +5,15 @@ const bcrypt = require('bcrypt');
 const UserModel = require('../models/UserModel');
 const jwt = require('jsonwebtoken');
 const secret = 'sadnaeh123139109nqkwdnqd/df12321dsaf';
+const cors = require('cors');
 const cookieParser = require('cookie-parser');
+const dotenv = require('dotenv');
 
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(cors({credentials: true, origin: 'http://localhost:5173'}));
 app.use(cookieParser());
+dotenv.config();
 
 router.post('/register', async (req, res, next) => {
     const {username, email, password} = req.body;

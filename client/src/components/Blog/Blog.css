@@ -17,17 +17,24 @@ div.Component> div.blogs > img {
     height: 300px;
     width: 500px;
     border-radius: 7px;
+    flex: 1;
 }
 
 div.Component > div.blogs {
     display: flex;
     justify-content: space-around;
-    /*align-items: center;  */
+    align-items: center; 
     margin: 40px;
+    gap: 60px;
 }
-
+div.Component > div.blogs > .r-side {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
 .Component> div.blogs>.r-side>p {
-    max-width: 700px;
+    width: 700px;
     font-size: 1.1rem;
     margin: 0;
 }
