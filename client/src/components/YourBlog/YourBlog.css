@@ -1,0 +1,59 @@
+.your-blog > h1 {
+    color: rgb(39, 15, 54);
+    font-size: 3rem;
+    text-align: center;
+}
+
+.your-blog {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.blogtitle > img {
+    width: 700px;
+    height: 500px;
+    border-radius: 15px;
+}
+
+.blogtitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons > a > button, .buttons > button {
+    padding: 7px;
+    background-color: transparent;
+    border: 1px solid rgb(39, 15, 54);
+    font-size: 1.1rem;
+    color: black;
+    border-radius: 5px;
+    margin-top: 20px;
+    width: 100px;
+    transition: all 0.3s ease;
+}
+
+.buttons > a > button:hover {
+    background-color: rgb(39, 15, 54);
+    border: none;
+    color: white;
+}
+.buttons > button:hover{
+    background-color: rgb(39, 15, 54);
+    border: none;
+    color: white;
+}
+.buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.blogtitle > p {
+    font-size: 1.4rem;
+    font-weight: 100;
+    max-width: 800px;
+    margin-top: 50px;
+}

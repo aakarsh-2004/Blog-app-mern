@@ -43,3 +43,6 @@ div.Component > div.blogs > .r-side {
     font-size: 3rem;
     color: rgb(39, 15, 54);
 }
+.r-side > a {
+    color: rgb(39, 15, 54);
+}

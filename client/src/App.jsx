@@ -8,7 +8,7 @@ import Create from './components/Create/Create';
 import MainBlog from './components/Blog/MainBlog';
 import Navbar from './components/Navbar/Navbar';
 import YourBlog from './components/YourBlog/YourBlog';
-
+import Update from './components/Update/Update';
 
 
 function App() {
@@ -17,13 +17,13 @@ function App() {
         <div className="App">
           <Navbar />
             <Routes>
-              <Route path='/' element={<YourBlog />}/>
+              <Route path='/' element={<LandingPage />}/>
               <Route path='/blogs' element={<MainBlog />}/>
               <Route path='/login' element={<Login />}/>
               <Route path='/register' element={<Register />}/>
               <Route path='/create' element={<Create />}/>
-              <Route path='/:id' element={<LandingPage />}/>
-              <Route path='/update' element={<LandingPage />}/>
+              <Route path='/post/:id' element={<YourBlog />}/>
+              <Route path='/update/:id' element={<Update />}/>
             </Routes>
         </div>
         </BrowserRouter>

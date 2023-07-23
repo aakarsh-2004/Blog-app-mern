@@ -3,6 +3,7 @@ const app = express();
 const router = express.Router();
 const bcrypt = require('bcrypt');
 const UserModel = require('../models/UserModel');
+const BlogModel = require('../models/BlogModel');
 const jwt = require('jsonwebtoken');
 const secret = 'sadnaeh123139109nqkwdnqd/df12321dsaf';
 const cors = require('cors');
@@ -67,5 +68,7 @@ router.get('/profile', (req, res, next) => {
 router.post('/logout', (req, res, next) => {
     res.cookie('token', '').json('ok');
 })
+
+
 
 module.exports = router;
