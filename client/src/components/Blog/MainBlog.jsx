@@ -7,7 +7,7 @@ const MainBlog = () => {
     const [blogs, setBlogs] = useState("");
     useEffect(() => {
         async function fetchData() {
-            const response = await axios.get('http://localhost:4000/blogs');
+            const response = await axios.get('https://blog-api.onrender.com/blogs');
             const result = response.data;
             setBlogs(result.reverse());
         }
@@ -20,10 +20,10 @@ const MainBlog = () => {
                 {blogs && blogs.map((blog) => {
                     return (
                         <div className="blogs" key={blog._id}>
-                            <img src={blog.link} alt="" />
+                            <a href={`/post/${blog._id}`}><img src={blog.link} alt="" /></a>
                             <div className="r-side">
                                 <a href={`/post/${blog._id}`}><h1>{blog.title}</h1></a>
-                                <p>{blog.description} <a href={`/post/${blog._id}`}>Read More</a></p>
+                                <p>{blog.description.slice(0,200)} <a href={`/post/${blog._id}`}>Read More</a></p>
                             </div>
                         </div>
                     )

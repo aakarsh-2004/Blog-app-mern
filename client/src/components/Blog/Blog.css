@@ -3,7 +3,9 @@ div.secondary-content>h1 {
     font-size: 3.5rem;
     color: rgb(39, 15, 54);
     margin-left: 60px;
+    transition: all 0.3s ease;
 }
+
 
 /* div.Component {
     display: flex;
@@ -13,11 +15,17 @@ div.secondary-content>h1 {
     align-items: center;
 } */
 
-div.Component> div.blogs > img {
+div.Component> div.blogs > a > img {
     height: 300px;
     width: 500px;
     border-radius: 7px;
     flex: 1;
+    transition: all 0.3s ease;
+}
+
+div.Component> div.blogs > a > img:hover {
+    filter: brightness(60%);
+    transform: translateY(-3px);
 }
 
 div.Component > div.blogs {
@@ -39,10 +47,24 @@ div.Component > div.blogs > .r-side {
     margin: 0;
 }
 
-.Component> div.blogs>.r-side>h1 {
+.Component> div.blogs>.r-side>p>a {
+    transition: all 0.2s ease;
+}
+
+.Component> div.blogs>.r-side>p>a:hover {
+    color: rgb(140, 3, 224);
+}
+
+.Component> div.blogs>.r-side> a > h1 {
     font-size: 3rem;
     color: rgb(39, 15, 54);
+    transition: all 0.1s ease;
 }
+
+.Component> div.blogs>.r-side> a > h1:hover {
+    color: black;
+}
+
 .r-side > a {
     color: rgb(39, 15, 54);
 }

@@ -25,7 +25,7 @@ const Create = () => {
     e.preventDefault();
     const updateData = {title, description, link};
     try {
-      const response = await axios.patch(`http://localhost:4000/update/${params.id}`, updateData);
+      const response = await axios.patch(`https://blog-api.onrender.com/update/${params.id}`, updateData);
       console.log(response.data);
       setIsAdded(true)
     } catch (error) {

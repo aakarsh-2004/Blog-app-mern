@@ -5,7 +5,7 @@ import { UserContext } from '../../Context'
 const Navbar = () => {
     const {setUserInfo, userInfo, isLoggedIn, setIsLoggedIn} = useContext(UserContext)
     useEffect(() => {
-        fetch('http://localhost:4000/profile', {
+        fetch('https://blog-api.onrender.com/profile', {
             credentials: 'include'
         }).then(response => {
             response.json().then(userInfo => {
@@ -15,7 +15,7 @@ const Navbar = () => {
         })
     }, [isLoggedIn]);
     const logout = () => {
-        fetch('http://localhost:4000/logout', {
+        fetch('https://blog-api.onrender.com/logout', {
             method: 'POST',
             credentials: 'include'
         })

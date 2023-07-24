@@ -6,7 +6,7 @@ const Blog = ({count}) => {
     const [blogs, setBlogs] = useState("");
     useEffect(() => {
         async function fetchData() {
-            const response = await axios.get('http://localhost:4000/blogs');
+            const response = await axios.get('https://blog-api.onrender.com/blogs');
             const result = response.data;
             setBlogs(result.reverse().slice(0, Number(count)));
         }
@@ -14,18 +14,18 @@ const Blog = ({count}) => {
     }, [])
     return (
         <div className='Component'>
-            {blogs && blogs.map((blog) => {
-                return (
-                    <div className="blogs" key={blog._id}>
-                        <img src={blog.link} alt="" />
-                        <div className="r-side">
-                            <h1>{blog.title}</h1>
-                            <p>{blog.description} <a href="">Read More</a></p>
+                {blogs && blogs.map((blog) => {
+                    return (
+                        <div className="blogs" key={blog._id}>
+                            <a href={`/post/${blog._id}`}><img src={blog.link} alt="" /></a>
+                            <div className="r-side">
+                                <a href={`/post/${blog._id}`}><h1>{blog.title}</h1></a>
+                                <p>{blog.description.slice(0,200)} <a href={`/post/${blog._id}`}>Read More</a></p>
+                            </div>
                         </div>
-                    </div>
-                )
-            })}
-        </div>
+                    )
+                })}
+            </div>
     );
 };
 

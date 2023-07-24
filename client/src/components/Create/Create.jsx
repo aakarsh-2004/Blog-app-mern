@@ -15,7 +15,7 @@ const Create = () => {
     e.preventDefault();
     try {
       const blogAdded = {title, description, link};
-      const response = await axios.post('http://localhost:4000/create', blogAdded);
+      const response = await axios.post('https://blog-api.onrender.com/create', blogAdded);
       console.log(response);
       setIsAdded(true);
       setTitle("")

@@ -16,7 +16,7 @@ const Register = () => {
     e.preventDefault();
     if (password === confirmPassword) {
       const userAdded = {username, email, password};
-      axios.post('http://localhost:4000/register', userAdded)
+      axios.post('https://blog-api.onrender.com/register', userAdded)
         .then((response) => {
           console.log(response);
           navigate('/blogs');

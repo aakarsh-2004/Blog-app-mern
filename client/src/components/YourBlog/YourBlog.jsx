@@ -16,7 +16,7 @@ const YourBlog = (props) => {
         getBlogData();
     }, [])
     const handleDelete = async () => {
-        const response = await axios.delete(`http://localhost:4000/post/delete/${params.id}`)
+        const response = await axios.delete(`https://blog-api.onrender.com/delete/${params.id}`)
         setIsDeleted(true)
         console.log(response);
     }
